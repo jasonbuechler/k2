@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+
+	<!--
+	**************************
+	  Surveillance Room
+	  https://github.com/maikito26/repository.maikito26.storage
+	   * plugin.video.surveillanceroom
+	   * context.surveillanceroom.togglepreview
+	   * context.surveillanceroom.play
+	**************************
+	-->
+	<addon id="plugin.video.surveillanceroom" name="Surveillance Room" version="1.2.3d" provider-name="jasonbuechler">
+		<requires>
+			<import addon="xbmc.python" version="2.20.0"/>
+			<import addon="script.module.requests" version="2.3.0" optional="false"/>
+			<import addon="context.surveillanceroom.play" optional="false"/>
+			<import addon="context.surveillanceroom.togglepreview" optional="false"/>
+		</requires>
+		<extension point="xbmc.python.pluginsource" library="default.py">
+			<provides>executable video</provides>
+		</extension>
+		<extension point="xbmc.service" library="service.py" start="login"/>
+		<extension point="xbmc.addon.metadata">
+			<platform>all</platform>
+			<summary>Surveillance Room is a full featured IP Camera viewer for up to 6 IP Cameras.	This add-on also supports Foscam IP Cameras APIs.</summary>
+			<description>Originally designed for Foscam HD IP cameras, this addon can now live stream and monitor motion and sound alarms for up to 6 IP Cameras.  The add-on can show the video feed for up to 4 IP Cameras simultaneously, or 6 cameras individaully.	 Motion or sound alarms for Foscam IP Cameras can be made to trigger a preview of the camera, or the preview windows can be called by a button, script or externally.</description>
+			<disclaimer>This add-on is not affiliated with Foscam. This add-on will modify some settings on the camera itself such as motion and sound detection settings.</disclaimer>
+			<forum>http://forum.kodi.tv/showthread.php?tid=240768</forum>
+			<website>https://github.com/maikito26</website>
+			<source>https://github.com/maikito26/plugin.video.surveillanceroom.git</source>
+			<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+		</extension>
+	</addon>
+	
+	<addon id="context.surveillanceroom.play" name="Surveillance Room - Play Camera" version="1.0.2" provider-name="Maikito26">
+		<extension point="kodi.context.item" library="default.py">
+			<item>
+				<label>Show Camera</label>
+				<visible>System.HasAddon(plugin.video.surveillanceroom)</visible>
+			</item>
+		</extension>
+		<extension point="xbmc.addon.metadata">
+			<platform>all</platform>
+			<summary>A context menu item that works with Surveillance Room - a full featured IP Camera viewer for up to 6 IP Cameras.</summary>
+			<description>Choose from the settings how this will work, and play the camera in the view you want!</description>
+			<disclaimer>This add-on is not affiliated with Foscam. This add-on will modify some settings on the camera itself such as motion and sound detection settings.</disclaimer>
+			<forum>http://forum.kodi.tv/showthread.php?tid=240768</forum>
+			<website>https://github.com/maikito26</website>
+			<source>https://github.com/maikito26/context.surveillanceroom.togglepreview.git</source>
+			<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+		</extension>
+	</addon>
+
+	<addon id="context.surveillanceroom.togglepreview" name="Surveillance Room - Toggle Preview Context Menu Item" version="1.0.0" provider-name="Maikito26">
+		<extension point="kodi.context.item" library="default.py">
+			<item>
+				<label>Toggle Camera Previews On/Off</label>
+				<visible>System.HasAddon(plugin.video.surveillanceroom)</visible>
+			</item>
+		</extension>
+		<extension point="xbmc.addon.metadata">
+			<platform>all</platform>
+			<summary>A context menu item that works with Surveillance Room - a full featured IP Camera viewer for up to 4 IP Cameras.</summary>
+			<description>Easily disable/enable previews from showing from the context menu as required.</description>
+			<disclaimer>This add-on is not affiliated with Foscam. This add-on will modify some settings on the camera itself such as motion and sound detection settings.</disclaimer>
+			<forum>http://forum.kodi.tv/showthread.php?tid=240768</forum>
+			<website>https://github.com/maikito26</website>
+			<source>https://github.com/maikito26/context.surveillanceroom.togglepreview.git</source>
+			<license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+		</extension>
+	</addon>	
+
+
+</addons>
