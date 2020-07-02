@@ -1,5 +1,0 @@
-------------------------
-Homer Repo 1.0.0 (14-Sep-17)
-------------------------
-
-- Forked and stripped down to new Repo
