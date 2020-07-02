@@ -8,9 +8,9 @@
 	</dir>
     </extension>
     <extension point="xbmc.addon.metadata">
-	<summary lang="en">Some repo</summary>
-	<description lang="en">Some repo</description>
-	<platform>all</platform>
-	<news>No news</news>
+		<summary lang="en">Some repo</summary>
+		<description lang="en">Some repo</description>
+		<platform>all</platform>
+		<news>No news</news>
     </extension>
 </addon>
