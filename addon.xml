@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.whatever" name="whatever" version="9.9.9" provider-name="whoever">
+    <extension point="xbmc.addon.repository" name="whatever">
+	<dir>
+		<info compressed="false">https://raw.githubusercontent.com/jasonbuechler/something/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/jasonbuechler/something/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/jasonbuechler/something/master/</datadir>
+	</dir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+	<summary lang="en">Some repo</summary>
+	<description lang="en">Some repo</description>
+	<platform>all</platform>
+	<news>No news</news>
+    </extension>
+</addon>
